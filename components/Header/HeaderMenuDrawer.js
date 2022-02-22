@@ -153,7 +153,7 @@ export default function HeaderMenuDrawer({navigation}) {
                                     alt=""
                                     className="w-5 h-auto block flex-shrink-0"
                                 />
-                                <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                                <span className="ms-3 block text-base font-medium text-gray-900">CAD</span>
                                 <span className="sr-only">, change currency</span>
                             </a>
                         </div>

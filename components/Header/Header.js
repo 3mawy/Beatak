@@ -299,7 +299,7 @@ export default function Header() {
                                         alt=""
                                         className="w-5 h-auto block flex-shrink-0"
                                     />
-                                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                                    <span className="ms-3 block text-base font-medium text-gray-900">CAD</span>
                                     <span className="sr-only">, change currency</span>
                                 </a>
                             </div>
@@ -315,7 +315,7 @@ export default function Header() {
                         <div className="h-16 flex items-center">
 
                             {/* Logo */}
-                            <div className="flex lg:ml-0  min-w-fit">
+                            <div className="flex lg:ms-0  min-w-fit">
                                 <a href="#">
                                     <span className="sr-only">Workflow</span>
                                     <img
@@ -327,19 +327,19 @@ export default function Header() {
                             </div>
                             <SearchBar className={' hidden md:block max-w-2xl '}/>
 
-                            <div className="ml-auto min-w-fit flex items-center ">
-                                <div className="hidden  md:flex md:flex-1 md:items-center md:justify-end md:space-x-4 px-4">
-                                    <a href="#" className="text-sm font-medium text-gray-700 hover:text-dark300 dark:hover:text-gray200">
+                            <div className="ms-auto min-w-fit flex items-center ">
+                                <div className="hidden  md:flex md:flex-1 md:items-center md:justify-end  px-4">
+                                    <a href="#" className="text-sm px-4 font-medium text-gray-700 hover:text-dark300 dark:hover:text-gray200">
                                         Sign in
                                     </a>
-                                    <span className="h-6 w-px bg-gray200" aria-hidden="true"/>
-                                    <a href="#" className="text-sm font-medium text-gray-700 hover:text-dark300 dark:hover:text-gray200">
+                                    <span className="h-6 w-px  bg-gray200" aria-hidden="true"/>
+                                    <a href="#" className="text-sm px-4 font-medium text-gray-700 hover:text-dark300 dark:hover:text-gray200">
                                         Create account
                                     </a>
                                 </div>
 
                                 {/* Search */}
-                                <div className="flex lg:ml-6">
+                                <div className="flex lg:ms-6">
                                     <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
                                         <span className="sr-only">Search</span>
                                         <SearchIcon className="w-6 h-6" aria-hidden="true"/>

@@ -37,11 +37,11 @@ export default function SearchBarSelect() {
         {({open}) => (<>
             <div className="relative pt-0.5">
                 <Listbox.Button
-                    className="relative w-24 pr-8 py-2 cursor-default text-gray400 dark:text-gray300 focus:outline-none  sm:text-sm">
+                    className="relative w-24 pe-8 py-2 cursor-default text-gray400 dark:text-gray300 focus:outline-none  sm:text-sm">
                     <span className="flex items-center justify-end">
-                        <span className="ml-3 block ">{selected.name}</span>
+                        <span className="ms-3 block ">{selected.name}</span>
                     </span>
-                    <span className="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                    <span className="ms-3 absolute inset-y-0 right-0 flex items-center pe-2 pointer-events-none">
                         <SelectorIcon className="h-5 w-5 text-gray-400" aria-hidden="true"/>
                     </span>
                 </Listbox.Button>
@@ -51,7 +51,7 @@ export default function SearchBarSelect() {
                     leave="transition ease-in duration-100"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
-                    className="z-10 mt-3 -ml-5 absolute w-30 rounded-md bg-white dark:bg-dark shadow-lg"
+                    className="z-10 mt-3 -ms-5 absolute w-30 rounded-md bg-white dark:bg-dark shadow-lg"
 
                 >
                     <Listbox.Options

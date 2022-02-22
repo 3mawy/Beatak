@@ -35,14 +35,14 @@ function HeaderCart(props) {
 
     return (
         <>
-            <div className="ml-4 flow-root lg:ml-6">
+            <div className="ms-4 flow-root lg:ms-6">
                 <button onClick={() => setOpen(true)} className="group -m-2 p-2 flex items-center">
                     <ShoppingBagIcon
                         className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-5useMediaQueryHook.js00"
                         aria-hidden="true"
                     />
                     <span
-                        className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                        className="ms-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
                 </button>
             </div>
@@ -61,7 +61,7 @@ function HeaderCart(props) {
                             <Dialog.Overlay className="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity"/>
                         </Transition.Child>
 
-                        <div className="fixed inset-y-0 right-0  pl-10 max-w-full flex">
+                        <div className="fixed inset-y-0 right-0  ps-10 max-w-full flex">
                             <Transition.Child
                                 as={Fragment}
                                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -77,7 +77,7 @@ function HeaderCart(props) {
                                             <div className="flex items-start justify-between">
                                                 <Dialog.Title className="text-lg font-medium text-gray-900">Shopping
                                                     cart</Dialog.Title>
-                                                <div className="ml-3 h-7 flex items-center">
+                                                <div className="ms-3 h-7 flex items-center">
                                                     <button
                                                         type="button"
                                                         className="-m-2 p-2 text-gray-400 hover:text-gray-500"
@@ -103,14 +103,14 @@ function HeaderCart(props) {
                                                                     />
                                                                 </div>
 
-                                                                <div className="ml-4 flex-1 flex flex-col">
+                                                                <div className="ms-4 flex-1 flex flex-col">
                                                                     <div>
                                                                         <div
                                                                             className="flex justify-between text-base font-medium text-gray-900">
                                                                             <h3>
                                                                                 <a href={product.href}>{product.name}</a>
                                                                             </h3>
-                                                                            <p className="ml-4">{product.price}</p>
+                                                                            <p className="ms-4">{product.price}</p>
                                                                         </div>
                                                                         <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                                                     </div>

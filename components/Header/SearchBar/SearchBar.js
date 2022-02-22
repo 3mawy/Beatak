@@ -3,7 +3,7 @@ import SearchBarSelect from "./SearchBarSelect";
 
 function SearchBar(props) {
     return (
-        <div className={` w-full pl-4 justify-start flex min-w-0 ${props.className}`}>
+        <div className={` w-full ps-4 justify-start flex min-w-0 ${props.className}`}>
             <div className="flex bg-gray100 dark:bg-dark rounded-full w-full">
                 <button className="flex items-center justify-center px-4 ">
                     <svg className="w-6 h-6 text-gray400 dark:text-gray300" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
