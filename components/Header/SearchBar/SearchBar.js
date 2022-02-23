@@ -1,7 +1,10 @@
 import React from 'react';
 import SearchBarSelect from "./SearchBarSelect";
+import {useTranslation} from "next-i18next";
 
 function SearchBar(props) {
+    const { t } = useTranslation('header');
+
     return (
         <div className={` w-full ps-4 justify-start flex min-w-0 ${props.className}`}>
             <div className="flex bg-gray100 dark:bg-dark rounded-full w-full">
@@ -13,7 +16,7 @@ function SearchBar(props) {
                         </path>
                     </svg>
                 </button>
-                <input type="text" className="py-2 placeholder:text-gray400 placeholder:dark:text-gray300 bg-transparent w-full rounded-full" placeholder="What are you looking for?"/>
+                <input type="text" className="py-2 placeholder:text-gray400 placeholder:dark:text-gray300 bg-transparent w-full rounded-full" placeholder={t('search')}/>
                 <SearchBarSelect/>
             </div>
         </div>

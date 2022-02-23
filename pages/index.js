@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
-import Toggle from '/components/ThemeToggle';
+import { useRouter } from 'next/router';
+import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 
-export default function Home() {
+function Home() {
+
     return (
         <div >
             <Head>
@@ -14,6 +17,8 @@ export default function Home() {
 
             <main>
                 <div className="container mx-auto">
+
+
                     <h1 className="text-lg text-center m-4">TailwindUI/Next.js</h1>
                     <p className="bg-green-600">This is a test of the tailwind next integration.</p>
 
@@ -24,3 +29,10 @@ export default function Home() {
         </div>
     )
 }
+
+export const getStaticProps = async ({ locale }) => ({
+    props: {
+        ...await serverSideTranslations(locale, ['common', 'header', 'searchBarSelect']),
+    },
+})
+export default Home

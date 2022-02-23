@@ -2,28 +2,29 @@
 import {Fragment, useState} from 'react'
 import {Listbox, Transition} from '@headlessui/react'
 import {CheckIcon, SelectorIcon} from '@heroicons/react/solid'
+import {useTranslation} from "react-i18next";
 
 const genres = [{
     id: 1,
-    name: 'All',
+    name: 'all',
 }, {
     id: 2,
-    name: 'Tracks',
+    name: 'tracks',
 }, {
     id: 3,
-    name: 'Musicians',
+    name: 'musicians',
 }, {
     id: 4,
-    name: 'Playlists',
+    name: 'playlists',
 }, {
     id: 5,
-    name: 'Albums',
+    name: 'albums',
 }, {
     id: 6,
-    name: 'Sound Kits',
+    name: 'sound kits',
 }, {
     id: 7,
-    name: 'Services',
+    name: 'services',
 },]
 
 function classNames(...classes) {
@@ -32,16 +33,17 @@ function classNames(...classes) {
 
 export default function SearchBarSelect() {
     const [selected, setSelected] = useState(genres[0])
+    const { t } = useTranslation('searchBarSelect');
 
     return (<Listbox value={selected} onChange={setSelected}>
         {({open}) => (<>
-            <div className="relative pt-0.5">
+            <div className="relative pt-0.5 ">
                 <Listbox.Button
-                    className="relative w-24 pe-8 py-2 cursor-default text-gray400 dark:text-gray300 focus:outline-none  sm:text-sm">
+                    className="relative  rtl:w-32 ltr:w-28 pe-8 py-2 cursor-default text-gray400 dark:text-gray300 focus:outline-none  sm:text-sm">
                     <span className="flex items-center justify-end">
-                        <span className="ms-3 block ">{selected.name}</span>
+                        <span className="ms-3 block ">{t(selected.name)}</span>
                     </span>
-                    <span className="ms-3 absolute inset-y-0 right-0 flex items-center pe-2 pointer-events-none">
+                    <span className="ms-3 absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center pe-2 pointer-events-none">
                         <SelectorIcon className="h-5 w-5 text-gray-400" aria-hidden="true"/>
                     </span>
                 </Listbox.Button>
@@ -67,7 +69,7 @@ export default function SearchBarSelect() {
                                     <span
                                         className={classNames(selected ? 'font-semibold' : 'font-normal', 'px-2 block truncate')}
                                     >
-                            {genre.name}
+                            {t(genre.name)}
                           </span>
                                 </div>
 

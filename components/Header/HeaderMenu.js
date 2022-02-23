@@ -148,7 +148,7 @@ export default function HeaderMenu() {
 
                             {/* Flyout menus menu links*/}
                             <Popover.Group className="hidden lg:block lg:self-stretch ">
-                                <div className="h-full flex space-x-8 ">
+                                <div className="h-full flex ">
                                     {navigation.categories.map((category) => (
                                         <Popover key={category.name} className="flex">
                                             {({open}) => (
@@ -159,7 +159,7 @@ export default function HeaderMenu() {
                                                                 open
                                                                     ? ' text-indigo-600'
                                                                     : 'border-transparent text-gray-700 hover:text-gray-800',
-                                                                'hover:border-indigo-600 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px'
+                                                                'hover:border-primary px-10 relative  flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px'
                                                             )}
                                                         >
                                                             {category.name}
@@ -252,7 +252,7 @@ export default function HeaderMenu() {
                                         <a
                                             key={page.name}
                                             href={page.href}
-                                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                                            className="flex items-center px-10 text-sm font-medium text-gray-700 hover:text-gray-800"
                                         >
                                             {page.name}
                                         </a>

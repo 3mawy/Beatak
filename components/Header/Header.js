@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Image from 'next/image';
-
+import { useTranslation } from 'next-i18next';
 import styles from '/styles/components/header.module.css'
 import SearchBar from "./SearchBar/SearchBar"
 
@@ -31,6 +31,7 @@ import {Dialog, Popover, Tab, Transition} from '@headlessui/react'
 import {MenuIcon, SearchIcon, ShoppingBagIcon, XIcon} from '@heroicons/react/outline'
 import HeaderAnnouncement from "./HeaderAnnouncement";
 import HeaderCart from "./HeaderCart";
+import LanguageToggle from "../LanguageToggle";
 
 const navigation = {
     categories: [
@@ -161,7 +162,7 @@ function classNames(...classes) {
 
 export default function Header() {
     const [open, setOpen] = useState(false)
-
+    const { t } = useTranslation('header');
     return (
         <div className="bg-white ">
             {/* Mobile menu */}
@@ -233,7 +234,7 @@ export default function Header() {
                                                         </div>
                                                         <a href={item.href}
                                                            className="mt-6 block font-medium text-gray-900">
-                                                            <span className="absolute z-10 inset-0" aria-hidden="true"/>
+                                                            <span className="absolute -z-50 inset-0" aria-hidden="true"/>
                                                             {item.name}
                                                         </a>
                                                         <p aria-hidden="true" className="mt-1">
@@ -291,7 +292,6 @@ export default function Header() {
                                     </a>
                                 </div>
                             </div>
-
                             <div className="border-t border-gray-200 py-6 px-4">
                                 <a href="#" className="-m-2 p-2 flex items-center">
                                     <img
@@ -308,7 +308,7 @@ export default function Header() {
                 </Dialog>
             </Transition.Root>
 
-            <header className="relative bg-white">
+            <header className="relative ">
                 {/*<HeaderAnnouncement title={'Get free delivery on orders over $100'}/>*/}
                 <nav aria-label="Top" className="dark:bg-dark300 mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
@@ -330,13 +330,14 @@ export default function Header() {
                             <div className="ms-auto min-w-fit flex items-center ">
                                 <div className="hidden  md:flex md:flex-1 md:items-center md:justify-end  px-4">
                                     <a href="#" className="text-sm px-4 font-medium text-gray-700 hover:text-dark300 dark:hover:text-gray200">
-                                        Sign in
+                                        {t('signIn')}
                                     </a>
                                     <span className="h-6 w-px  bg-gray200" aria-hidden="true"/>
                                     <a href="#" className="text-sm px-4 font-medium text-gray-700 hover:text-dark300 dark:hover:text-gray200">
-                                        Create account
+                                        {t('createAccount')}
                                     </a>
                                 </div>
+                                <LanguageToggle/>
 
                                 {/* Search */}
                                 <div className="flex lg:ms-6">
