@@ -37,10 +37,10 @@ export default function SearchBarSelect() {
 
     return (<Listbox value={selected} onChange={setSelected}>
         {({open}) => (<>
-            <div className="relative pt-0.5 ">
+            <div className="hidden md:block relative pt-0.5 ">
                 <Listbox.Button
                     className="relative  rtl:w-32 ltr:w-28 pe-8 py-2 cursor-default text-gray400 dark:text-gray300 focus:outline-none  sm:text-sm">
-                    <span className="flex items-center justify-end">
+                    <span className="flex  items-center justify-end">
                         <span className="ms-3 block ">{t(selected.name)}</span>
                     </span>
                     <span className="ms-3 absolute inset-y-0 rtl:left-0 ltr:right-0 flex items-center pe-2 pointer-events-none">

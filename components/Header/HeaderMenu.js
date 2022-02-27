@@ -1,5 +1,5 @@
 import SearchBar from "./SearchBar/SearchBar";
-import {useMediaQuery} from '/hooks/useMediaQueryHook';
+import {useMediaQuery} from '/components/hooks/useMediaQueryHook';
 
 
 import {Fragment, useState} from 'react'

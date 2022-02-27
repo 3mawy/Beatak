@@ -2,7 +2,7 @@ import {ShoppingBagIcon} from "@heroicons/react/outline";
 import {Fragment, useState} from 'react'
 import {Dialog, Transition} from '@headlessui/react'
 import {XIcon} from '@heroicons/react/outline'
-import {useMediaQuery} from '/hooks/useMediaQueryHook';
+import {useMediaQuery} from '/components/hooks/useMediaQueryHook';
 
 const products = [
     {
