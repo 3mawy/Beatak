@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {CheckIcon, SelectorIcon} from '@heroicons/react/solid'
+import { SunIcon, MoonIcon} from '@heroicons/react/solid'
 import {useTheme} from "next-themes";
 
 const Toggle = () => {
@@ -21,14 +21,14 @@ const Toggle = () => {
     return (
         <div className="transition duration-500 ease-in-out rounded-full p-2">
             {theme === 'dark' ? (
-                <CheckIcon
+                <SunIcon
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+                    className="text-gray-500 dark:text-gray-400 w-8 text-md cursor-pointer"
                 />
             ) : (
-                <SelectorIcon
+                <MoonIcon
                     onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    className="text-gray-500 dark:text-gray-400 text-2xl cursor-pointer"
+                    className="text-gray-500 dark:text-gray-400 w-8 text-md cursor-pointer"
                 />
             )}
         </div>
