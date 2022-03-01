@@ -5,6 +5,9 @@ import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router';
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
+import HomeSwiper from "../components/Swiper/HomeSwiper";
+import {genres, members, playlists, tracks} from "../components/Swiper/testData";
+
 
 function Home() {
 
@@ -17,11 +20,11 @@ function Home() {
             </Head>
 
             <main>
-                <div className="container mx-auto">
-
-                    <h1 className="text-lg text-center m-4">TailwindUI/Next.js</h1>
-                    <p className="bg-green-600">This is a test of the tailwind next integration.</p>
-
+                <div className=" mx-auto">
+                    <HomeSwiper heading ={`Recommended Playlists`} style={'playlists'} data={playlists}/>
+                    <HomeSwiper heading ={`Trending tracks`} style={'tracks'} data={tracks}/>
+                    <HomeSwiper heading ={`Recommended Members`} style={'members'} data={members}/>
+                    <HomeSwiper heading ={`Popular Genres`} style={'genres'} data={genres}/>
                 </div>
             </main>
 
