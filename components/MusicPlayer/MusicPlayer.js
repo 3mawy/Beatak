@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {useSession} from "next-auth/react";
-import {PlusIcon, DotsVerticalIcon} from "@heroicons/react/solid";
 import {PauseIcon, PlayIcon} from "@heroicons/react/outline";
 import PlayerOptions from "./PlayerOptions";
 import SideBarSkeleton from "../SideBarSkeleton";
