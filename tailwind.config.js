@@ -1,19 +1,18 @@
-
 module.exports = {
     content: ["./pages/**/*.{js,ts,jsx,tsx}",
         "./components/**/*.{js,ts,jsx,tsx}",
     ],
     darkMode: 'class',
     theme: {
-        screens: {
-            sm: '480px',
-            md: '768px',
-            lg: '976px',
-            xl: '1440px',
-        },
-
-
         extend: {
+            screens: {
+                sm: '480px',
+                md: '768px',
+                lg: '976px',
+                xl: '1440px',
+            },
+
+
             colors: {
                 primary: '#ea8616',
                 secondary: '#ecc94b',
@@ -41,6 +40,7 @@ module.exports = {
                 '144': '36rem',
             }
         },
+
     },
     plugins: [
         require('tailwindcss-rtl'),
