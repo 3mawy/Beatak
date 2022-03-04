@@ -48,7 +48,7 @@ function HeaderCart(props) {
                 </button>
             </div>
             <Transition.Root show={open} as={Fragment}>
-                <Dialog as="div" className="fixed  inset-0 overflow-hidden " onClose={setOpen}>
+                <Dialog as="div" className="z-50 fixed inset-0 overflow-hidden " onClose={setOpen}>
                     <div className="absolute inset-0 overflow-hidden">
                         <Transition.Child
                             as={Fragment}

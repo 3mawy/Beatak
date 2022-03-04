@@ -5,7 +5,7 @@ import {XIcon} from '@heroicons/react/outline'
 import {useMediaQuery} from '/components/hooks/useMediaQueryHook';
 
 
-function HeaderCart(props) {
+function SideBarSkeleton(props) {
     const {open, toggleQueueMenuCallBack} = props
     const isMobile = useMediaQuery(1023);
 
@@ -13,7 +13,7 @@ function HeaderCart(props) {
         <>
 
             <Transition.Root show={open} as={Fragment}>
-                        <div className="fixed bottom-[3rem] top-[7rem] rtl:left-0 right-0  ps-10 max-w-full flex">
+                        <div className="fixed z-20 bottom-[3rem] top-[7rem] rtl:left-0 right-0  ps-10 max-w-full flex">
                             <Transition.Child
                                 as={Fragment}
                                 enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -23,8 +23,8 @@ function HeaderCart(props) {
                                 leaveFrom="translate-x-0"
                                 leaveTo="translate-x-full"
                             >
-                                <div className="w-screen max-w-md ">
-                                    <div className="h-full flex flex-col bg-light dark:bg-dark500 overflow-y-scroll">
+                                <div className="w-screen max-w-md">
+                                    <div className=" z-50 h-full flex flex-col bg-light dark:bg-dark500 overflow-y-scroll">
                                         <div className="flex-1 py-6 overflow-y-auto px-4 sm:px-6">
                                             <div className="flex items-start justify-between">
                                                 <h1 className="text-lg font-medium text-gray-900">Playing queue</h1>
@@ -52,4 +52,4 @@ function HeaderCart(props) {
     );
 }
 
-export default HeaderCart;
+export default SideBarSkeleton;

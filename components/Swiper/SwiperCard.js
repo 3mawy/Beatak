@@ -31,7 +31,7 @@ function CustomSlide(props) {
             </div>
 
             <div className={`${members ? "text-center" : "text-start"} pt-2.5 px-2`}>
-                {data.tracks && <p className={`font-light inline-flex`}>{data.followers}<p className={`px-1`}>Followers</p> ● <p className={`px-1 flex`}> {data.tracks} Tracks</p></p>}
+                {data.tracks && <p className={`font-light inline-flex`}>{data.followers} Followers ● {data.tracks} Tracks</p>}
                 <h3 className={` text-xl `}>{data.name}</h3>
                 {data.user && <p >{data.user}</p>}
                 {data.location && <p>{data.location}</p>}
