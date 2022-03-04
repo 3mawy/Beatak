@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Slider, {createSliderWithTooltip} from 'rc-slider';
-import {Mute, VolumeIcon} from "components/Icons";
+import {Mute, VolumeIcon} from "/components/Icons";
 import 'rc-slider/assets/index.css';
 
 import { Range } from 'react-range';
