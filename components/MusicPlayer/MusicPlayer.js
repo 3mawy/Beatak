@@ -6,6 +6,7 @@ import SideBarSkeleton from "../SideBarSkeleton";
 import Volume from "./Volume";
 import SongRange from "./Slider/SongRange";
 import Image from "next/image"
+
 function MusicPlayer(props) {
     const {toggleQueueMenuCallBack} = props
     const {data: session, status} = useSession()
@@ -18,14 +19,16 @@ function MusicPlayer(props) {
             <div
                 className="grid  grid-cols-2 lg:grid-cols-3 justify-items-center text-xs font-semibold text-gray-500 px-2 md:px-4 py-2">
                 <div className="justify-self-start flex space-x-5">
-                    <div className={`flex items-center md:space-x-4`}>
-                        <Image
-                            src="https://source.unsplash.com/300x300/?music"
-                            alt=""
-                            width="160"
-                            height="160"
-                            className="hidden md:inline w-12 h-12 lg:w-14 lg:h-14 rounded-lg "
-                        />
+                    <div className={`flex items-center md:space-x-2`}>
+                        <div className="hidden md:inline  rounded-lg ">
+                            <Image
+                                src="https://picsum.photos/300/300/?music"
+                                alt=""
+                                width={50}
+                                height={50}
+                            />
+                        </div>
+
                         <div className={`self-center `}>
                             <h3>
                                 <a href={``}>

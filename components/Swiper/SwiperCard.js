@@ -24,15 +24,16 @@ function CustomSlide(props) {
     return (
         <div className={`grid justify-center pb-14 pt-1  my-1 `}>
             <div className={`grid relative text-center`}>
-                <Image src={data.img} alt={`beatak ${data.name}`} className={` ${members ? "rounded-full" : "rounded-xl"}
-                        w-full h-auto aspect-square object-cover p-2`}/>
+                <div className={`w-full h-auto  relative aspect-square object-cover p-2` }>
+                    <Image  height={260} width={260} className={` ${members ? "rounded-full" : "rounded-xl"} w-full h-auto aspect-square` } src={data.img} alt={`beatak ${data.name}`}/>
+                </div>
                 {renderOverlay()}
             </div>
 
             <div className={`${members ? "text-center" : "text-start"} pt-2.5 px-2`}>
-                {data.tracks && <p className={`font-light`}>{data.followers} Followers ● {data.tracks} Tracks</p>}
+                {data.tracks && <p className={`font-light inline-flex`}>{data.followers}<p className={`px-1`}>Followers</p> ● <p className={`px-1 flex`}> {data.tracks} Tracks</p></p>}
                 <h3 className={` text-xl `}>{data.name}</h3>
-                {data.user && <p>{data.user}</p>}
+                {data.user && <p >{data.user}</p>}
                 {data.location && <p>{data.location}</p>}
             </div>
 

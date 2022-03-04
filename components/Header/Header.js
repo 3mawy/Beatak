@@ -157,7 +157,7 @@ export default function Header() {
                                                 <div key={item.name} className="group relative text-sm">
                                                     <div
                                                         className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                                        <Image src={item.imageSrc} alt={item.imageAlt}
+                                                        <Image width={5} height={5} src={item.imageSrc} alt={item.imageAlt}
                                                              className="object-center object-cover"/>
                                                     </div>
                                                     <a href={item.href}
@@ -217,6 +217,7 @@ export default function Header() {
                         <div className="border-t border-gray-200 py-6 px-4">
                             <a href="#" className="-m-2 p-2 flex items-center">
                                 <Image
+                                    width={5} height={5}
                                     src="https://tailwindui.com/img/flags/flag-canada.svg"
                                     alt=""
                                     className="w-5 h-auto block flex-shrink-0"
@@ -237,11 +238,11 @@ export default function Header() {
                     <div className="h-16 flex items-center">
 
                         {/* Logo */}
-                        <div className="flex lg:ms-0  min-w-fit cursor-pointer">
+                        <div className="flex lg:ms-0 h-8 w-auto min-w-fit cursor-pointer">
                             <Link href="/" passHref>
                                 <Image
-                                    className="h-8 w-auto"
-                                    src="favicon.svg"
+                                    width={25} height={25}
+                                    src="/favicon.svg"
                                     alt="Beatak logo"
                                 />
                             </Link>
