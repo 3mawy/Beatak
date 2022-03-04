@@ -8,6 +8,8 @@ import {Popover, Transition} from '@headlessui/react'
 import {SearchIcon, ShoppingBagIcon} from '@heroicons/react/outline'
 import HeaderMenuDrawer from "./HeaderMenuDrawer";
 import HeaderCart from "./HeaderCart";
+import {useRouter} from "next/router";
+import Link from "next/link";
 
 const navigation = {
     categories: [
@@ -127,8 +129,8 @@ const navigation = {
         },
     ],
     pages: [
-        {name: 'Company', href: '#'},
-        {name: 'Stores', href: '#'},
+        {name: 'Home', href: '/'},
+        {name: 'Feed', href: '/feed'},
     ],
 }
 
@@ -137,7 +139,8 @@ function classNames(...classes) {
 }
 
 export default function HeaderMenu() {
-
+    const router = useRouter();
+    let activeLink;
     return (
         <div className="bg-white">
             {/* Mobile menu */}
@@ -150,8 +153,21 @@ export default function HeaderMenu() {
                             {/* Flyout menus menu links*/}
                             <Popover.Group className="hidden lg:block lg:self-stretch ">
                                 <div className="h-full flex ">
+
+                                    {navigation.pages.map((page) => (
+                                        <Link
+                                            passHref
+                                            key={page.name}
+                                            href={page.href}
+                                        >
+                                            <a className={`flex items-center px-10 text-sm font-medium text-gray-700 hover:text-gray-800 ${(router.pathname === page.href ) && 'border-primary transition-colors ease-out duration-200 border-b-2'}`}
+                                            >
+                                                {page.name}
+                                            </a>
+                                        </Link>
+                                    ))}
                                     {navigation.categories.map((category) => (
-                                        <Popover key={category.name} className="flex">
+                                        <Popover key={category.name} className="flex z-50">
                                             {({open}) => (
                                                 <>
                                                     <div className="relative flex">
@@ -160,7 +176,7 @@ export default function HeaderMenu() {
                                                                 open
                                                                     ? ' text-indigo-600'
                                                                     : 'border-transparent text-gray-700 hover:text-gray-800',
-                                                                'hover:border-primary px-10 relative  flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px'
+                                                                'hover:border-primary transition-colors ease-out duration-200 px-10 relative  flex items-center  text-sm font-medium border-b-2 '
                                                             )}
                                                         >
                                                             {category.name}
@@ -250,15 +266,6 @@ export default function HeaderMenu() {
                                         </Popover>
                                     ))}
 
-                                    {navigation.pages.map((page) => (
-                                        <a
-                                            key={page.name}
-                                            href={page.href}
-                                            className="flex items-center px-10 text-sm font-medium text-gray-700 hover:text-gray-800"
-                                        >
-                                            {page.name}
-                                        </a>
-                                    ))}
                                 </div>
                             </Popover.Group>
                             <SearchBar className={' md:hidden'}/>

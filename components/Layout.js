@@ -21,7 +21,7 @@ const Layout = ({children}) => {
     <Header />
     <HeaderMenu />
     <HeroSection/>
-    <div >
+    <div className={`mb-auto min-h-screen`}>
         {children}
     </div>
 
