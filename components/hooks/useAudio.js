@@ -14,7 +14,7 @@ const useAudio = (url, vol) => {
 
     setAudio(new Audio(url)) // only call client
 
-  })
+  }, [url])
   useEffect(() => {
     const favicon = document.querySelector('#favicon');
     const logo = document.querySelector('#logo');

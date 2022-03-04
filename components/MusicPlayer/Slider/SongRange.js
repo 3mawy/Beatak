@@ -12,7 +12,7 @@ function SongRange(props) {
     const muteToggle = () => setMuted(!muted);
     useEffect(() => {
         setSongAt([0])
-    })
+    }, [])
     const audio = {
         duration:500,
 

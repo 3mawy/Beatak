@@ -5,10 +5,9 @@ import MusicMenu from "./Menu";
 function PlayerOptions(props) {
     return (
         <>
-            <button className="focus:outline-none px-3 py-2  rounded-md  hover:bg-dark ">
+            <button className="focus:outline-none px-3 rounded-md hover:bg-dark hidden md:inline-block">
                 <PlusIcon className={`h-6 w-6`}/>
             </button>
-
             <MusicMenu/>
         </>
     );

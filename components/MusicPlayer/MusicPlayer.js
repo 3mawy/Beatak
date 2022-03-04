@@ -14,7 +14,7 @@ function MusicPlayer(props) {
     const [queueMenu, setQueueMenu] = useState(false)
 
     return (
-        <div className="w-full max-h-24 bg-white dark:bg-dark300 absolute z-50 bottom-0">
+        <div className="w-full max-h-24 bg-white dark:bg-dark300 sticky z-50 bottom-0">
             <SongRange/>
             <div
                 className="grid  grid-cols-2 lg:grid-cols-3 justify-items-center text-xs font-semibold text-gray-500 px-2 md:px-4 py-2">
