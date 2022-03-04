@@ -44,7 +44,7 @@ function HeaderButtons(props) {
                         <UserIcon className="w-6 h-6" aria-hidden="true"/>
                     </Link>
                 </div>
-                <Link href="/">
+                <Link href="/" passHref>
                     <a
                         onClick={signOut}
                         className="bg-blue-800 text-white hover:bg-blue-600 flex items-center px-2 py-2 text-sm font-medium rounded-md">

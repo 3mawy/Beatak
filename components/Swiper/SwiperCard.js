@@ -1,5 +1,5 @@
 import React from 'react';
-import {SwiperSlide} from "swiper/react";
+import Image from "next/image"
 import {PlayIcon} from "@heroicons/react/outline";
 
 function CustomSlide(props) {
@@ -24,7 +24,7 @@ function CustomSlide(props) {
     return (
         <div className={`grid justify-center pb-14 pt-1  my-1 `}>
             <div className={`grid relative text-center`}>
-                <img src={data.img} className={` ${members ? "rounded-full" : "rounded-xl"}
+                <Image src={data.img} alt={`beatak ${data.name}`} className={` ${members ? "rounded-full" : "rounded-xl"}
                         w-full h-auto aspect-square object-cover p-2`}/>
                 {renderOverlay()}
             </div>

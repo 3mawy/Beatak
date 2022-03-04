@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 import {Dialog, Tab, Transition} from "@headlessui/react";
 import {MenuIcon, XIcon} from "@heroicons/react/outline";
@@ -82,7 +83,7 @@ export default function HeaderMenuDrawer({navigation}) {
                                                 <div key={item.name} className="group relative text-sm">
                                                     <div
                                                         className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                                        <img src={item.imageSrc} alt={item.imageAlt}
+                                                        <Image src={item.imageSrc} alt={item.imageAlt}
                                                              className="object-center object-cover"/>
                                                     </div>
                                                     <a href={item.href}
@@ -148,7 +149,7 @@ export default function HeaderMenuDrawer({navigation}) {
 
                         <div className="border-t border-gray-200 py-6 px-4">
                             <a href="#" className="-m-2 p-2 flex items-center">
-                                <img
+                                <Image
                                     src="https://tailwindui.com/img/flags/flag-canada.svg"
                                     alt=""
                                     className="w-5 h-auto block flex-shrink-0"

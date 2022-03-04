@@ -35,7 +35,7 @@ function Auth({children}) {
     useEffect(() => {
         if (status === 'loading') return // Do nothing while loading
         if (!isUser) router.push('/login') //Redirect to login
-    }, [isUser, status])
+    }, [isUser, router, status])
 
     if (isUser) {
         return children

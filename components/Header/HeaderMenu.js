@@ -1,6 +1,7 @@
 import SearchBar from "./SearchBar/SearchBar";
 import {useMediaQuery} from '/components/hooks/useMediaQueryHook';
 
+import Image from "next/image"
 
 import {Fragment, useState} from 'react'
 import {Popover, Transition} from '@headlessui/react'
@@ -192,7 +193,7 @@ export default function HeaderMenu() {
                                                                                      className="group relative text-base sm:text-sm">
                                                                                     <div
                                                                                         className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                                                                        <img
+                                                                                        <Image
                                                                                             src={item.imageSrc}
                                                                                             alt={item.imageAlt}
                                                                                             className="object-center object-cover"
