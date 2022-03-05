@@ -5,7 +5,7 @@ function HeroSection(props) {
     return (
         <div className={`mb-20`}>
             <div className={`w-full h-screen60 relative rounded-lg justify-center grid`}>
-                <div className={`left-0 bottom-5 absolute z-20`}>
+                <div className={`ltr:left-0 rtl:right-0 bottom-5 absolute z-20`}>
                     <h1 className={`text-5xl ms-4 mb-2`}>Hello</h1>
                     <SearchBar/>
                 </div>
