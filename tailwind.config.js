@@ -11,7 +11,13 @@ module.exports = {
                 lg: '976px',
                 xl: '1440px',
             },
-
+            height: {
+                "screen60": "60vh",
+                "screen/2": "50vh",
+                "screen/3": "calc(100vh / 3)",
+                "screen/4": "calc(100vh / 4)",
+                "screen/5": "calc(100vh / 5)",
+            },
 
             colors: {
                 primary: '#ea8616',
