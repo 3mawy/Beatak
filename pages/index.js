@@ -7,6 +7,7 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import MusicPlayer from "../components/MusicPlayer/MusicPlayer";
 import HomeSwiper from "../components/Swiper/HomeSwiper";
 import {genres, members, playlists, tracks} from "../components/Swiper/testData";
+import HeroSection from "../components/HeroSection/HeroSection";
 
 
 function Home() {
@@ -19,8 +20,9 @@ function Home() {
                 <link rel="icon" href="/favicon.svg"/>
             </Head>
 
-            <main>
+            <main className={``}>
                 <div className=" mx-auto">
+                    <HeroSection/>
                     <HomeSwiper heading ={`Recommended Playlists`} style={'playlists'} data={playlists}/>
                     <HomeSwiper heading ={`Trending tracks`} style={'tracks'} data={tracks}/>
                     <HomeSwiper heading ={`Recommended Members`} style={'members'} data={members}/>

@@ -231,11 +231,11 @@ export default function Header() {
             </Dialog>
         </Transition.Root>
 
-        <header className="relative ">
+        <header className="relative dark:bg-dark300">
             {/*<HeaderAnnouncement title={'Get free delivery on orders over $100'}/>*/}
-            <nav aria-label="Top" className="dark:bg-dark300 mx-auto px-4 sm:px-6 lg:px-8">
+            <nav aria-label="Top" className=" mx-auto px-4 xl:container sm:px-6 lg:px-8">
                 <div>
-                    <div className="h-16 flex items-center">
+                    <div className="h-14 mt-2 flex  items-center">
 
                         {/* Logo */}
                         <div className="flex lg:ms-0 h-8 w-auto min-w-fit cursor-pointer">

@@ -142,12 +142,12 @@ export default function HeaderMenu() {
     const router = useRouter();
     let activeLink;
     return (
-        <div className="bg-white">
+        <div className="bg-white dark:bg-dark300">
             {/* Mobile menu */}
-            <header className="relative bg-white dark:bg-dark300">
+            <header className="relative mx-auto xl:container ">
                 <nav aria-label="Top" className=" mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
-                        <div className="sm:h-12  flex items-center ">
+                        <div className="sm:h-10  flex items-center ">
                             <HeaderMenuDrawer navigation={navigation}/>
 
                             {/* Flyout menus menu links*/}

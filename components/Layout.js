@@ -20,7 +20,6 @@ const Layout = ({children}) => {
 <>        <div className={'dark:bg-dark400 '} dir={locale === 'ar' ? 'rtl' : 'ltr'} >
     <Header />
     <HeaderMenu />
-    <HeroSection/>
     <div className={`mb-auto min-h-screen`}>
         {children}
     </div>

@@ -20,7 +20,7 @@ function SongRange(props) {
     return (
         <div className={` flex items-center  ${props.className}`}>
             <Slider
-                className={`slider`}
+                className={`slider -mt-1`}
                 defaultValue={0}
                 min={0}
                 max={audio.duration}
