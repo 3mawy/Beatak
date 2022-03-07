@@ -3,22 +3,22 @@ import Image from "next/image";
 
 function FeedPost(props) {
     return (
-        <div className={`bg-gray100 dark:bg-dark300 px-6 py-5 w-full flex grid mb-2 space-y-5`}>
+        <div className={`bg-gray100 dark:bg-dark300 ps-6 py-5 w-full flex grid mb-2 space-y-5`}>
             <div className={`flex items-center md:space-s-2`}>
                 <Image
                     src="https://picsum.photos/300/300/?music"
                     alt=""
                     width={40}
                     height={40}
-                    className={'rounded-full'}
+                    className={'rounded-full ms-2'}
                 />
 
-                <div className={`self-center flex `}>
+                <div className={`self-center flex`}>
                     <h3 className={`text-sm inline`}>
                         <a href={``}>
                             Artist Name
                         </a>
-                        <p className={` ms-1 inline dark:text-gray300`}>
+                        <p className={` mx-1 inline dark:text-gray300`} dir={`ltr`}>
                             @artist
                         </p>
                         <span className={`dark:text-gray300`}> • 2d</span>
