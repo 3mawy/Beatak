@@ -4,7 +4,7 @@ import Image from "next/image";
 function FeedPost(props) {
     return (
         <div className={`bg-gray100 dark:bg-dark300 ps-6 py-5 w-full flex grid mb-2 space-y-5`}>
-            <div className={`flex items-center md:space-s-2`}>
+            <div className={`flex items-center space-s-2`}>
                 <Image
                     src="https://picsum.photos/300/300/?music"
                     alt=""
@@ -27,14 +27,17 @@ function FeedPost(props) {
                 </div>
 
             </div>
-            <div className={`flex items-center space-s-4`}>
-                <Image
-                    src="https://picsum.photos/300/300/?music"
-                    alt=""
-                    width={150}
-                    height={150}
-                    className={`rounded-sm`}
-                />
+            <div className={`flex items-center space-s-3`}>
+                <div className={`w-20 h-20 md:h-auto md:w-auto`}>
+                    <Image
+                        src="https://picsum.photos/300/300/?music"
+                        alt=""
+                        width={150}
+                        height={150}
+                        className={`rounded-sm`}
+                    />
+
+                </div>
 
                 <div className={`self-start flex`}>
                     <button

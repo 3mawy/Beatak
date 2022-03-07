@@ -145,7 +145,7 @@ export default function HeaderMenu() {
         <div className="bg-white dark:bg-dark300">
             {/* Mobile menu */}
             <header className="relative mx-auto xl:container ">
-                <nav aria-label="Top" className=" mx-auto px-4 sm:px-6 lg:px-8">
+                <nav aria-label="Top" className="pb-1.5 lg:pb-0 mx-auto px-4 sm:px-6 lg:px-8">
                     <div>
                         <div className="sm:h-10  flex items-center ">
                             <HeaderMenuDrawer navigation={navigation}/>

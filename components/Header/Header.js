@@ -233,7 +233,7 @@ export default function Header() {
 
         <header className="relative dark:bg-dark300">
             {/*<HeaderAnnouncement title={'Get free delivery on orders over $100'}/>*/}
-            <nav aria-label="Top" className=" mx-auto px-4 xl:container sm:px-6 lg:px-4">
+            <nav aria-label="Top" className=" mx-auto px-4 xl:container ">
                 <div>
                     <div className="h-14 mt-2 flex  items-center">
 
