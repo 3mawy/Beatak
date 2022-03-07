@@ -12,6 +12,10 @@ module.exports = {
                 lg: '976px',
                 xl: '1440px',
             },
+            fontFamily: {
+                poppins: ["Poppins"],
+
+            },
             height: {
                 "screen/2": "50vh",
                 "screen60": "60vh",
@@ -45,7 +49,8 @@ module.exports = {
             spacing: {
                 '128': '32rem',
                 '144': '36rem',
-            }
+            },
+
         },
 
     },

@@ -17,7 +17,7 @@ const Layout = ({children}) => {
         setQueueMenu(queueMenu);
     }, []);
     return (
-<>        <div className={'dark:bg-dark400 '} dir={locale === 'ar' ? 'rtl' : 'ltr'} >
+<>        <div className={'dark:bg-dark400 font-poppins'} dir={locale === 'ar' ? 'rtl' : 'ltr'} >
     <Header />
     <HeaderMenu />
     <div className={`mb-auto min-h-screen`}>
