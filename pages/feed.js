@@ -9,11 +9,15 @@ function Feed(props) {
         <div className={`xl:container grid mx-auto px-4 `}>
             <h1 className={`text-3xl py-5`}>Your Feed</h1>
 
-            <div className={`grid md:space-s-3 grid-cols-1 md:grid-cols-3 lg:grid-cols-8`}  dir={`ltr`}>
-                <div className="hidden md:block md:col-span-1 lg:col-span-2"><FeedSearchesCard data={`Tags`}/></div>
-                <div className="col-start-1  md:col-span-2 lg:col-span-4"><FeedCard data={`Feed`}/></div>
-                <div className="col-span-2 hidden lg:block"><FeedFollowCard data={`Suggested`}/></div>
-            </div>
+                <div className={`grid flex  `}  dir={`ltr`}>
+                    <div className={`grid self-center flex md:space-s-3 grid-flow-col`}>
+                        <div className=" hidden md:grid lg:col-span-2 max-w-sm"><FeedSearchesCard data={`Tags`}/></div>
+                        <div className="md:col-span-2 lg:col-span-5 xl:col-span-4 "><FeedCard data={`Feed`}/></div>
+                        <div className="xl:col-span-2 hidden xl:block"><FeedFollowCard data={`Suggested`}/></div>
+                    </div>
+
+                </div>
+
         </div>
 
     );
