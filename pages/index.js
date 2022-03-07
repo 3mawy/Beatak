@@ -21,12 +21,15 @@ function Home() {
             </Head>
 
             <main className={``}>
-                <div className=" mx-auto">
+                <div className="">
                     <HeroSection/>
-                    <HomeSwiper heading ={`Recommended Playlists`} style={'playlists'} data={playlists}/>
-                    <HomeSwiper heading ={`Trending tracks`} style={'tracks'} data={tracks}/>
-                    <HomeSwiper heading ={`Recommended Members`} style={'members'} data={members}/>
-                    <HomeSwiper heading ={`Popular Genres`} style={'genres'} data={genres}/>
+                    <div className={`xl:container mx-auto md:px-4`}>
+                        <HomeSwiper heading={`Recommended Playlists`} style={'playlists'} data={playlists}/>
+                        <HomeSwiper heading={`Trending tracks`} style={'tracks'} data={tracks}/>
+                        <HomeSwiper heading={`Recommended Members`} style={'members'} data={members}/>
+                        <HomeSwiper heading={`Popular Genres`} style={'genres'} data={genres}/>
+                    </div>
+
                 </div>
             </main>
 

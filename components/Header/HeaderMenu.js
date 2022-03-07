@@ -156,11 +156,13 @@ export default function HeaderMenu() {
 
                                     {navigation.pages.map((page) => (
                                         <Link passHref key={page.name} href={page.href}>
-                                            <a className={`flex items-center w-28 text-sm font-medium text-gray-700 
-                                            hover:text-gray-800 ${(router.pathname === page.href ) && 'border-primary' +
+                                            <a className={`flex items-center w-24 hover:text-gray100
+                                             ${(router.pathname === page.href) && 'border-primary' +
                                             ' transition-colors ease-out duration-200 border-b-2'}`}
                                             >
-                                                {page.name}
+                                                <p className={`text-sm font-medium text-gray-700 `}>
+                                                    {page.name}
+                                                </p>
                                             </a>
                                         </Link>
                                     ))}
@@ -266,7 +268,7 @@ export default function HeaderMenu() {
 
                                 </div>
                             </Popover.Group>
-                            <SearchBar className={' md:hidden'}/>
+                            <SearchBar className={' md:hidden ps-3'}/>
                         </div>
                     </div>
                 </nav>

@@ -4,11 +4,11 @@ import SearchBar from "../Header/SearchBar/SearchBar";
 //TODO : refactor for light mode
 function HeroSection(props) {
     return (
-        <div className={`mb-20`}>
+        <div className={`mb-20 `}>
             <div className={`w-full h-screen60 relative rounded-lg  grid`}>
-                <div className={`xl:container relative mx-auto`}>
-                    <div className={`ltr:left-0 rtl:right-0 bottom-5 absolute z-20 `}>
-                        <h1 className={`text-5xl ms-4 mb-2`}>Hello</h1>
+                <div className={`xl:container  relative mx-auto`}>
+                    <div className={`ltr:left-0 rtl:right-0 bottom-5 absolute z-20 md:px-4`}>
+                        <h1 className={`text-5xl mb-2`}>Hello</h1>
                         <SearchBar/>
                     </div>
                 </div>

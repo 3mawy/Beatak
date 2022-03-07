@@ -22,10 +22,10 @@ function CustomSlide(props) {
         }
     }
     return (
-        <div className={`grid justify-center pb-14 pt-1  my-1 `}>
+        <div className={`grid justify-center pb-14 pt-1  my-1 w-fit`}>
             <div className={`grid relative text-center`}>
-                <div className={`w-full h-auto  relative aspect-square object-cover p-2` }>
-                    <Image  height={260} width={260} className={` ${members ? "rounded-full" : "rounded-xl"} w-full h-auto aspect-square` } src={data.img} alt={`beatak ${data.name}`}/>
+                <div className={`w-full h-auto relative aspect-square object-cover ` }>
+                    <Image  height={265} width={265} className={` ${members ? "rounded-full" : "rounded-xl"} w-full h-auto aspect-square` } src={data.img} alt={`beatak ${data.name}`}/>
                 </div>
                 {renderOverlay()}
             </div>

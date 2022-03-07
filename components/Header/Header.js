@@ -247,7 +247,7 @@ export default function Header() {
                                 />
                             </Link>
                         </div>
-                        <SearchBar className={'hidden md:block max-w-2xl '}/>
+                        <SearchBar className={'hidden md:block max-w-2xl ps-4'}/>
                         <div className="ms-auto min-w-fit flex items-center ">
                             <HeaderButtons/>
                             <LanguageToggle/>
