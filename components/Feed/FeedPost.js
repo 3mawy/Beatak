@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function FeedPost(props) {
     return (
-        <div className={`bg-gray100 dark:bg-dark300 ps-6 py-5 w-full flex grid mb-2 space-y-5`}>
+        <div className={`bg-gray100 dark:bg-dark300 ps-3 md:ps-6 py-3 md:py-5 w-full flex grid mb-2 space-y-5`}>
             <div className={`flex items-center space-s-2`}>
                 <Image
                     src="https://picsum.photos/300/300/?music"
@@ -13,17 +13,17 @@ function FeedPost(props) {
                     className={'rounded-full ms-2'}
                 />
 
-                <div className={`self-center flex`}>
-                    <h3 className={`text-sm inline`}>
+                <div className={`self-center text-sm flex truncate`}>
+                    <h3 className={` inline`}>
                         <a href={``}>
                             Artist Name
                         </a>
-                        <p className={` mx-1 inline dark:text-gray300`} dir={`ltr`}>
-                            @artist
-                        </p>
-                        <span className={`dark:text-gray300`}> • 2d</span>
-                    </h3>
 
+                    </h3>
+                    <p className={` mx-1 inline dark:text-gray300`} dir={`ltr`}>
+                        @artist
+                    </p>
+                    <span className={`dark:text-gray300`}> • 2d</span>
                 </div>
 
             </div>
@@ -41,14 +41,14 @@ function FeedPost(props) {
 
                 <div className={`self-start flex`}>
                     <button
-                            className=" self-center rounded-full w-6 h-6 flex items-center justify-center pl-0.5 ring-1 ring-primary focus:outline-none">
+                            className="self-center rounded-full w-6 h-6 flex items-center justify-center pl-0.5 ring-1 ring-primary focus:outline-none">
                         <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                              strokeWidth="2"
                              strokeLinecap="round" strokeLinejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
                         </svg>
                     </button>
-                    <h3 className={`text-xl inline ms-2 `}>
+                    <h3 className={`sm:text-xl inline self-center ms-2  text-sm truncate`}>
                         <a href={``}>
                             Track Name
                         </a>

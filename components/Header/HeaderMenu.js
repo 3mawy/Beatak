@@ -145,22 +145,20 @@ export default function HeaderMenu() {
         <div className="bg-white dark:bg-dark300">
             {/* Mobile menu */}
             <header className="relative mx-auto xl:container ">
-                <nav aria-label="Top" className="pb-1.5 lg:pb-0 mx-auto px-4 sm:px-6 lg:px-8">
+                <nav aria-label="Top" className="pb-1.5 lg:pb-0 mx-auto px-4 ">
                     <div>
                         <div className="sm:h-10  flex items-center ">
                             <HeaderMenuDrawer navigation={navigation}/>
 
                             {/* Flyout menus menu links*/}
                             <Popover.Group className="hidden lg:block lg:self-stretch ">
-                                <div className="h-full flex ">
+                                <div className="h-full flex pt-0.5 ">
 
                                     {navigation.pages.map((page) => (
-                                        <Link
-                                            passHref
-                                            key={page.name}
-                                            href={page.href}
-                                        >
-                                            <a className={`flex items-center px-10 text-sm font-medium text-gray-700 hover:text-gray-800 ${(router.pathname === page.href ) && 'border-primary transition-colors ease-out duration-200 border-b-2'}`}
+                                        <Link passHref key={page.name} href={page.href}>
+                                            <a className={`flex items-center w-28 text-sm font-medium text-gray-700 
+                                            hover:text-gray-800 ${(router.pathname === page.href ) && 'border-primary' +
+                                            ' transition-colors ease-out duration-200 border-b-2'}`}
                                             >
                                                 {page.name}
                                             </a>
@@ -170,13 +168,13 @@ export default function HeaderMenu() {
                                         <Popover key={category.name} className="flex z-50">
                                             {({open}) => (
                                                 <>
-                                                    <div className="relative flex">
+                                                    <div className="relative flex ">
                                                         <Popover.Button
                                                             className={classNames(
                                                                 open
                                                                     ? ' text-indigo-600'
                                                                     : 'border-transparent text-gray-700 hover:text-gray-800',
-                                                                'hover:border-primary transition-colors ease-out duration-200 px-10 relative  flex items-center  text-sm font-medium border-b-2 '
+                                                                'hover:border-primary transition-colors ease-out duration-200 w-28 ps-1 relative  flex items-center  text-sm font-medium border-b-2 '
                                                             )}
                                                         >
                                                             {category.name}

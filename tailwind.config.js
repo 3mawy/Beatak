@@ -6,14 +6,15 @@ module.exports = {
     theme: {
         extend: {
             screens: {
-                sm: '480px',
+                xs: '190px',
+                sm: '300px',
                 md: '768px',
                 lg: '976px',
                 xl: '1440px',
             },
             height: {
-                "screen60": "60vh",
                 "screen/2": "50vh",
+                "screen60": "60vh",
                 "screen/3": "calc(100vh / 3)",
                 "screen/4": "calc(100vh / 4)",
                 "screen/5": "calc(100vh / 5)",
@@ -24,7 +25,7 @@ module.exports = {
                 secondary: '#ecc94b',
                 'dark': '#1c1e1f',
                 'dark300': '#181a1a',
-                'dark400': '#1a1c1c',
+                'dark400': '#0f1010',
                 'dark500': '#141515',
 
                 'light': '#f8f7f7',
