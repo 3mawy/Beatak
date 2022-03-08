@@ -99,7 +99,7 @@ export default function Header() {
     const [open, setOpen] = useState(false)
     const {t} = useTranslation('header');
 
-    return (<div className="bg-white ">
+    return (<div className="">
         {/* Mobile menu */}
         <Transition.Root show={open} as={Fragment}>
             <Dialog as="div" className="fixed inset-0 flex z-40 lg:hidden" onClose={setOpen}>
