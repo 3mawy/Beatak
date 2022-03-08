@@ -1,15 +1,7 @@
 {
+    "theme_color": "#181a1a",
+    "background_color": "#181a1a",
 
-    "media_overrides": {
-        "(prefers-color-scheme: dark)": {
-            "theme_color": "#fff",
-            "background_color": "#000"
-        },
-        "(prefers-color-scheme: light)": {
-            "theme_color": "#000",
-            "background_color": "#fff"
-        }
-    },
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
