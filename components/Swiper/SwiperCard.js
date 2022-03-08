@@ -30,7 +30,7 @@ function CustomSlide(props) {
                 {renderOverlay()}
             </div>
 
-            <div className={`${members ? "text-center" : "text-start"} pt-2.5 px-2`}>
+            <div className={`${members ? "text-center" : "text-start"} pt-2.5 `}>
                 {data.tracks && <p className={`font-light inline-flex`}>{data.followers} Followers ● {data.tracks} Tracks</p>}
                 <h3 className={` text-xl `}>{data.name}</h3>
                 {data.user && <p >{data.user}</p>}

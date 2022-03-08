@@ -1,6 +1,16 @@
 {
     "theme_color": "#f69435",
     "background_color": "#f69435",
+    "media_overrides": {
+        "(prefers-color-scheme: dark)": {
+            "theme_color": "#fff",
+            "background_color": "#000"
+        },
+        "(prefers-color-scheme: light)": {
+            "theme_color": "#000",
+            "background_color": "#fff"
+        }
+    },
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
