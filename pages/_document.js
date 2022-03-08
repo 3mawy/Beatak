@@ -13,6 +13,7 @@ export default class MyDocument extends Document {
 
             <Html lang="ar">
                 <Head>
+                    <link rel="manifest" href="/manifest.json" />
                     <meta name="description" content="Beatak The First Arabic platform for Hip-Hop"/>
                     <link rel="icon" href="/favicon.svg"/>
                     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet" />
