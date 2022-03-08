@@ -24,8 +24,8 @@ function CustomSlide(props) {
     return (
         <div className={`grid justify-center pb-14 pt-1  my-1 w-fit`}>
             <div className={`grid relative text-center`}>
-                <div className={`w-full h-auto relative aspect-square object-cover ` }>
-                    <Image  height={265} width={265} className={` ${members ? "rounded-full" : "rounded-xl"} w-full h-auto aspect-square` } src={data.img} alt={`beatak ${data.name}`}/>
+                <div className={`w-full h-auto relative aspect-square object-cover ltr:pr-4 rtl:pl-4` }>
+                    <Image  height={265} width={265} className={` ${members ? "rounded-full" : "rounded-lg"} w-full h-auto aspect-square` } src={data.img} alt={`beatak ${data.name}`}/>
                 </div>
                 {renderOverlay()}
             </div>

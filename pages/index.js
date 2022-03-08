@@ -23,7 +23,7 @@ function Home() {
             <main className={``}>
                 <div className="">
                     <HeroSection/>
-                    <div className={`xl:container mx-auto md:px-4`}>
+                    <div className={`xl:container mx-auto ps-4`}>
                         <HomeSwiper heading={`Recommended Playlists`} style={'playlists'} data={playlists}/>
                         <HomeSwiper heading={`Trending tracks`} style={'tracks'} data={tracks}/>
                         <HomeSwiper heading={`Recommended Members`} style={'members'} data={members}/>

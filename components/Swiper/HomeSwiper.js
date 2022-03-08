@@ -12,7 +12,7 @@ export default function HomeSwiper(props) {
     const isMobile = useMediaQuery(700)
     return (
         <div>
-            <h1 className={`text-2xl mt-3`}>
+            <h1 className={`text-2xl mt-3 mb-5`}>
                 {heading}
             </h1>
             <Swiper
