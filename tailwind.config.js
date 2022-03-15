@@ -34,7 +34,8 @@ module.exports = {
                 'dark500': '#141515',
 
                 'light': '#f8f7f7',
-                'gray100': '#efeaea',
+                'gray50': '#f6f6f6',
+                'gray100': '#eeeeee',
                 'gray200': '#c1c6ce',
                 'gray300': '#9ca3af',
                 'gray400': '#33383a',

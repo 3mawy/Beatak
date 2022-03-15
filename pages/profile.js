@@ -1,9 +1,10 @@
 import React from 'react';
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import Register from "../components/Register/Register";
 
 function Profile(props) {
     return (
-        <div>profile</div>
+        <Register/>
     );
 }
 export const getStaticProps = async ({ locale }) => ({

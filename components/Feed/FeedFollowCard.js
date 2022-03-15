@@ -31,7 +31,7 @@ const data = [
 function FeedSearchesCard(props) {
     return (
         <div
-            className="shadow-md h-screen bg-gray100 dark:bg-dark300 my-2 px-3 md:px-5 py-3 md:py-5">
+            className="shadow-md h-screen bg-gray50 dark:bg-dark300 my-2 px-3 md:px-5 py-3 md:py-5">
             <div className={`flex grid grid-cols-1 text-start space-y-5`}>
                 <h1 className={`text-2xl font-bold`}>Who to follow</h1>
                 <div className={`space-y-5  text-lg `}>
@@ -49,10 +49,10 @@ function FeedSearchesCard(props) {
                             <div className={`flex grow h-fit`}>
                                 <div className={`grow `}>
                                     <h2 className={`block text-sm font-bold flex truncate`}>{i.name}</h2>
-                                    <span className={`text-gray text-sm flex`}> {`${i.results}k results`}</span>
+                                    <span className={`dark:text-gray text-gray400 text-sm flex`}> {`${i.results}k results`}</span>
                                 </div>
                                 <div className={`mt-1 h-fit`}>
-                                    <button className={`bg-gray400 rounded px-3 py-1.5 flex`}><UserAddIcon className={`h-5 self-center`}/></button>
+                                    <button className={`dark:bg-gray400 bg-gray200 rounded px-3 py-1.5 flex`}><UserAddIcon className={`h-5 self-center`}/></button>
                                 </div>
                             </div>
 

@@ -156,7 +156,7 @@ export default function HeaderMenu() {
 
                                     {navigation.pages.map((page) => (
                                         <Link passHref key={page.name} href={page.href}>
-                                            <a className={`flex items-center w-24 hover:text-gray100
+                                            <a className={`flex items-center w-24 hover:text-primary
                                              ${(router.pathname === page.href) && 'border-primary' +
                                             ' transition-colors ease-out duration-200 border-b-2'}`}
                                             >

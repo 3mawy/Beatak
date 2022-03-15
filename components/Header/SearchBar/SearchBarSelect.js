@@ -53,7 +53,7 @@ export default function SearchBarSelect() {
                     leave="transition ease-in duration-100"
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
-                    className="z-10 mt-3 -ms-5 absolute w-30 rounded-md bg-white dark:bg-dark shadow-lg"
+                    className="z-10 mt-3 -ms-5 absolute w-30 rounded-md bg-gray50  dark:bg-dark shadow-lg"
 
                 >
                     <Listbox.Options

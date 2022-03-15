@@ -9,25 +9,30 @@ import MusicPlayer from "./MusicPlayer/MusicPlayer";
 import SideBarSkeleton from "./SideBarSkeleton";
 
 
-
 const Layout = ({children}) => {
-    const {locale} = useRouter()
+    const {locale, pathname} = useRouter()
     const [queueMenu, setQueueMenu] = useState(false)
     const handleSetQueueMenu = useCallback((queueMenu) => {
         setQueueMenu(queueMenu);
     }, []);
+    // TODO: make music player dynamic on play
+    const showMusicPlayer = pathname !== "/login" && pathname !== "/profile";
     return (
-<>        <div className={'dark:bg-dark400 font-poppins'} dir={locale === 'ar' ? 'rtl' : 'ltr'} >
-    <Header />
-    <HeaderMenu />
-    <div className={`mb-auto min-h-screen`}>
-        {children}
-    </div>
+        <>
+            <div className={'dark:bg-dark400 font-poppins'} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+                <Header/>
+                <HeaderMenu/>
+                <div className={`mb-auto min-h-[76.73vh]`}>
+                    {children}
+                </div>
 
-</div>
-    <MusicPlayer toggleQueueMenuCallBack={handleSetQueueMenu}/>
-    <SideBarSkeleton toggleQueueMenuCallBack={handleSetQueueMenu} open={queueMenu}/>
-</>
+            </div>
+            {showMusicPlayer && <div>
+                <MusicPlayer toggleQueueMenuCallBack={handleSetQueueMenu}/>
+                <SideBarSkeleton toggleQueueMenuCallBack={handleSetQueueMenu} open={queueMenu}/>
+            </div>}
+
+        </>
 
     );
 };

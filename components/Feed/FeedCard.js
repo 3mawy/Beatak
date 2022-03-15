@@ -9,7 +9,7 @@ function FeedCard(props) {
     return (
         <div dir={locale === 'ar' ? 'rtl' : 'ltr'}
             className={`flex grid grid-cols-1 bg-transparent my-2 text-green-500 font-bold lg:px-2  `}>
-            <div className={`bg-gray100 dark:bg-dark300 h-10 w-full flex grid mb-2 px-6`}>
+            <div className={`bg-gray50 dark:bg-dark300 h-10 w-full flex grid mb-2 px-6`}>
                 <h1 className={`self-center text-primary`}>Announcement</h1>
             </div>
             <FeedPost/>

@@ -9,7 +9,7 @@ function SearchBar(props) {
     const {t} = useTranslation('header');
     return (
         <div className={`w-full justify-start flex min-w-0 ${props.className}`}>
-            <div className="flex bg-gray100 dark:bg-dark rounded-full w-full">
+            <div className="flex bg-gray50 dark:bg-dark rounded-full w-full">
                 <button className=" cursor-default flex items-center justify-center px-4 ">
                     <svg className="w-6 h-6 text-gray400 dark:text-gray300" fill="currentColor"
                          xmlns="http://www.w3.org/2000/svg"
