@@ -5,6 +5,7 @@ import {appWithTranslation} from 'next-i18next';
 import {SessionProvider, useSession} from 'next-auth/react'
 import {useEffect} from 'react'
 import {useRouter} from 'next/router'
+import NextNProgress from "nextjs-progressbar";
 
 function MyApp({Component, pageProps}) {
     return (
@@ -14,11 +15,20 @@ function MyApp({Component, pageProps}) {
                 {Component.auth ? (
                     <Auth>
                         <Layout>
+                            <NextNProgress   color="#ea8616"
+                                             startPosition={0.3}
+                                             stopDelayMs={200}
+                                             height={3}
+                                             showOnShallow={true} nonce="my-nonce"/>
                             <Component {...pageProps} />
                         </Layout>
                     </Auth>
                 ) : (
                     <Layout>
+                        <NextNProgress   color="#ea8616"
+                                         startPosition={0.4}
+                                         height={3}
+                                         showOnShallow={true} nonce="my-nonce" options={{ easing: "ease", speed: 500 }} />
                         <Component {...pageProps} />
                     </Layout>
                 )}
