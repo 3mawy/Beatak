@@ -204,14 +204,14 @@ export default function Header() {
 
                         <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                             <div className="flow-root">
-                                <a href="#" className="-m-2 p-2 block font-medium text-gray-200">
+                                <Link href="/login" className="-m-2 p-2 block font-medium text-gray-200">
                                     Sign in
-                                </a>
+                                </Link>
                             </div>
                             <div className="flow-root">
-                                <a href="#" className="-m-2 p-2 block font-medium dark:text-gray-200">
+                                <Link href="/register" className="-m-2 p-2 block font-medium dark:text-gray-200">
                                     Create account
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="border-t border-gray-200 py-6 px-4">

@@ -16,7 +16,7 @@ const Layout = ({children}) => {
         setQueueMenu(queueMenu);
     }, []);
     // TODO: make music player dynamic on play
-    const showMusicPlayer = pathname !== "/login" && pathname !== "/profile";
+    const showMusicPlayer = pathname !== "/login" && pathname !== "/profile" && pathname !== "/register";
     return (
         <>
             <div className={'dark:bg-dark400 font-poppins'} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
