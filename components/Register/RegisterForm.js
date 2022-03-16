@@ -6,7 +6,7 @@ export default function RegisterForm() {
     return (
         <>
 
-            <div className="min-h-full flex flex-col justify-center py-8 sm:px-6 lg:px-8">
+            <div className="min-h-full flex flex-col justify-center py-10 sm:px-6 lg:px-8">
                 <div className="">
                     <img
                         className="mx-auto h-12 w-auto"

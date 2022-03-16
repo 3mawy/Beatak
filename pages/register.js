@@ -6,7 +6,10 @@ import {useTranslation} from "next-i18next";
 function Register(props) {
 
     return (
-        <RegisterForm/>
+        <div className={`min-h-screen`}>
+            <RegisterForm/>
+
+        </div>
     );
 }
 export const getStaticProps = async ({ locale }) => ({
