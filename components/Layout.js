@@ -7,6 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 import {useRouter} from "next/router";
 import MusicPlayer from "./MusicPlayer/MusicPlayer";
 import SideBarSkeleton from "./SideBarSkeleton";
+import Footer from "./Footer/Footer";
 
 
 const Layout = ({children}) => {
@@ -27,11 +28,12 @@ const Layout = ({children}) => {
                 </div>
 
             </div>
-            {showWidgets && <div>
+            <Footer/>
+
+            {showWidgets && <>
                 <MusicPlayer toggleQueueMenuCallBack={handleSetQueueMenu}/>
                 <SideBarSkeleton toggleQueueMenuCallBack={handleSetQueueMenu} open={queueMenu}/>
-            </div>}
-
+            </>}
         </>
 
     );
