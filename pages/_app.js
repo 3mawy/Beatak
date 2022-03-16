@@ -19,7 +19,7 @@ function MyApp({Component, pageProps}) {
                                              startPosition={0.3}
                                              stopDelayMs={200}
                                              height={3}
-                                             showOnShallow={true} nonce="my-nonce"/>
+                                             showOnShallow={true} nonce="my-nonce" options={{ showSpinner: false, easing: "ease", speed: 500,  }}/>
                             <Component {...pageProps} />
                         </Layout>
                     </Auth>
@@ -28,7 +28,7 @@ function MyApp({Component, pageProps}) {
                         <NextNProgress   color="#ea8616"
                                          startPosition={0.4}
                                          height={3}
-                                         showOnShallow={true} nonce="my-nonce" options={{ easing: "ease", speed: 500 }} />
+                                         showOnShallow={true} nonce="my-nonce" options={{ showSpinner: false, easing: "ease", speed: 500,  }} />
                         <Component {...pageProps} />
                     </Layout>
                 )}

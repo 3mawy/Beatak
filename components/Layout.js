@@ -16,18 +16,18 @@ const Layout = ({children}) => {
         setQueueMenu(queueMenu);
     }, []);
     // TODO: make music player dynamic on play
-    const showMusicPlayer = pathname !== "/login" && pathname !== "/profile" && pathname !== "/register";
+    const showWidgets = pathname !== "/login" && pathname !== "/profile" && pathname !== "/register";
     return (
         <>
             <div className={'dark:bg-dark400 font-poppins'} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
                 <Header/>
-                <HeaderMenu/>
+                {showWidgets &&<HeaderMenu/>}
                 <div className={`mb-auto min-h-[76.73vh]`}>
                     {children}
                 </div>
 
             </div>
-            {showMusicPlayer && <div>
+            {showWidgets && <div>
                 <MusicPlayer toggleQueueMenuCallBack={handleSetQueueMenu}/>
                 <SideBarSkeleton toggleQueueMenuCallBack={handleSetQueueMenu} open={queueMenu}/>
             </div>}
