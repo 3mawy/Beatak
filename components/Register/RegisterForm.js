@@ -1,8 +1,23 @@
 import {useTranslation} from "next-i18next";
-
+import {useState} from "react";
+import { csrfToken } from '/lib/csrf';
 export default function RegisterForm() {
     const {t} = useTranslation('register');
+    const [email, setEmail] = useState("a");
+    const [password, setPassword] = useState("a");
+    const handleRegister = async (e) => {
+        e.preventDefault();
+        const res = await fetch('http://localhost:8000/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({'email': email,'password': password, "name": "lll", "password_confirmation": password}),
+        }).then((t) => t.json())
+        const response = res
+        console.log(response)
 
+    }
     return (
         <>
 
@@ -24,7 +39,7 @@ export default function RegisterForm() {
 
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                     <div className="bg-gray100 dark:bg-dark300 py-8 px-4 shadow sm:rounded-lg sm:px-10">
-                        <form className="space-y-6" action="#" method="POST">
+                        <form className="space-y-6" >
                             <div>
                                 <label htmlFor="email" className="block text-sm font-medium ">
                                     {t('email address')}
@@ -37,6 +52,8 @@ export default function RegisterForm() {
                                         autoComplete="email"
                                         required
                                         className="appearance-none bg-white dark:bg-dark block w-full px-3 py-2 rounded-md shadow-sm placeholder-gray focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        value={email}
+                                        onChange={e => setEmail(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -53,6 +70,8 @@ export default function RegisterForm() {
                                         autoComplete="current-password"
                                         required
                                         className="appearance-none block w-full px-3 py-2 bg-white dark:bg-dark rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        value={password}
+                                        onChange={e => setPassword(e.target.value)}
                                     />
                                 </div>
                             </div>
@@ -81,6 +100,7 @@ export default function RegisterForm() {
                                 <button
                                     type="submit"
                                     className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                    onClick={handleRegister}
                                 >
                                     {t('sign in')}
                                 </button>
